@@ -18,22 +18,22 @@ namespace solidapproach
         public bool IsBooked  {get { return isbooked; } set { isbooked = value; } }
 
         public int fare { get { return Fare; } set { Fare = value; } }
-        public void Book(IProduct product,IRepository storage,int fare)
-        {
-            History.Instance.AddToLogFile("In book method setting the boolean value to true.");
-            product.IsBooked = true;
-            History.Instance.AddToLogFile("Calling AddToFile method to add the booked product details to file.");
-            storage.Add( product,fare);
-            Console.WriteLine("Car Booked");
-        }
+        //public void Book(IProduct product,IRepository storage,int fare)
+        //{
+        //    History.Instance.AddToLogFile("In book method setting the boolean value to true.");
+        //    product.IsBooked = true;
+        //    History.Instance.AddToLogFile("Calling AddToFile method to add the booked product details to file.");
+        //    storage.Add( product,fare);
+        //    Console.WriteLine("Car Booked");
+        //}
 
-        public void Save(IProduct product,IRepository storage,int fare )
-        {
+        //public void Save(IProduct product,IRepository storage,int fare )
+        //{
             
-            History.Instance.AddToLogFile("Calling AddToFile method to add the booked product details to file.");
-            storage.Add(product,fare);
+        //    History.Instance.AddToLogFile("Calling AddToFile method to add the booked product details to file.");
+        //    storage.Add(product,fare);
 
-            Console.WriteLine("Car Product saved");
-        }
+        //    Console.WriteLine("Car Product saved");
+        //}
     }
 }

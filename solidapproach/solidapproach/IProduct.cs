@@ -13,7 +13,7 @@ namespace solidapproach
          bool IsBooked { get; set; }
 
         int fare { get; set; }
-        void Save(IProduct product,IRepository storage,int fare);
-        void Book(IProduct product, IRepository storage,int fare);
+        //void Save(IProduct product,IRepository storage,int fare);
+        //void Book(IProduct product, IRepository storage,int fare);
     }
 }

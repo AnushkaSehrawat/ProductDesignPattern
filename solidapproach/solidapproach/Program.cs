@@ -12,6 +12,7 @@ namespace solidapproach
         {
             History.Instance.AddToLogFile("----In Main -----");
             gettingtype obj = new gettingtype();
+            ProductService serviceobj = new ProductService();
             int option;
             string itemType;
             string storageType;
@@ -30,7 +31,7 @@ namespace solidapproach
                         Console.WriteLine("Enter option where you want to save the details: 1: FileRepository 2: SqlRepository");
                         storageType = Console.ReadLine();
                         IRepository finalstorage = obj.GetStorageType(storageType);
-                        finalObject.Book(finalObject,finalstorage,fareItemType.CalculateFare(finalObject.fare));
+                        serviceobj.Book(finalObject,finalstorage,fareItemType.CalculateFare(finalObject.fare));
                         break;
                     }
 
@@ -39,7 +40,7 @@ namespace solidapproach
                         Console.WriteLine("Enter option where you want to save the details: 1: File 2: Database");
                         storageType = Console.ReadLine();
                         IRepository finalstorage = obj.GetStorageType(storageType);
-                        finalObject.Save(finalObject,finalstorage, fareItemType.CalculateFare(finalObject.fare));
+                        serviceobj.Save(finalObject,finalstorage, fareItemType.CalculateFare(finalObject.fare));
                         break;
                     }
 
