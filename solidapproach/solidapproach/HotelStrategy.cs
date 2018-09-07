@@ -10,6 +10,7 @@ namespace solidapproach
     {
         public int CalculateFare(int totalFare)
         {
+            History.Instance.AddToLogFile("calculating and returning fare of Hotel Strategy Class");
             return (totalFare + 50);
         }
     }

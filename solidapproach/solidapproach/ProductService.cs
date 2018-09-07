@@ -12,7 +12,7 @@ namespace solidapproach
         {
             History.Instance.AddToLogFile("In book method setting the boolean value to true.");
             product.IsBooked = true;
-            History.Instance.AddToLogFile("Calling AddToFile method to add the booked product details to file.");
+            History.Instance.AddToLogFile("Calling AddToFile method "+storage.GetType()+"Product class to add the booked product details to file.");
             storage.Add(product, fare);
 
             Console.WriteLine(product.ProductType+" Booked Successfully!!");
@@ -21,7 +21,7 @@ namespace solidapproach
         public void Save(IProduct product, IRepository storage, int fare)
         {
 
-            History.Instance.AddToLogFile("Calling AddToFile method to add the booked product details to file.");
+            History.Instance.AddToLogFile("Calling AddToFile method " + storage.GetType() + "to add the booked product details to file.");
             storage.Add(product, fare);
             Console.WriteLine(product.ProductType + " saved Successfully!!");
         }

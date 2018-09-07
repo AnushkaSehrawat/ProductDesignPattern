@@ -13,7 +13,7 @@ namespace solidapproach
 
         public IProduct DetermineItemType(string itemType)
         {
-            History.Instance.AddToLogFile("returning the instance dynamically.");
+            History.Instance.AddToLogFile("returning the Product Instance dynamically.");
          
             System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
             var productType = assembly.GetTypes().FirstOrDefault(t => t.Name == itemType);
@@ -23,6 +23,7 @@ namespace solidapproach
 
         public IRepository GetStorageType(string storageType)
         {
+            History.Instance.AddToLogFile("returning the Storage instance dynamically.");
             System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
             var productType = assembly.GetTypes().FirstOrDefault(t => t.Name == storageType);
             return (IRepository)Activator.CreateInstance(productType);
@@ -30,16 +31,24 @@ namespace solidapproach
 
         public IFareStrategy GetItemTypeForFare(IProduct product)
         {
+            History.Instance.AddToLogFile("returning the Strategy instance dynamically.");
             Type t = product.GetType();
             if (t == typeof(CarProduct))
             {
                 return new CarStrategy();
             }
-            else
+            else if(t==typeof(HotelProduct))
             {
                 return new HotelStrategy();
             }
-
+            else if(t==typeof(AirProduct))
+            {
+                return new AirStrategy();
+            }
+            else
+            {
+                return new ActivityStrategy();
+            }
         }
     }
 }

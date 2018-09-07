@@ -10,7 +10,7 @@ namespace solidapproach
     {
        
         public string prodtype = "Car";
-        public string prodname = "abc";
+        public string prodname = "BMW";
         public bool isbooked = false;
         public int Fare = 30;
         public string ProductType { get { return prodtype; } set { prodtype = value; } }
@@ -18,22 +18,6 @@ namespace solidapproach
         public bool IsBooked  {get { return isbooked; } set { isbooked = value; } }
 
         public int fare { get { return Fare; } set { Fare = value; } }
-        //public void Book(IProduct product,IRepository storage,int fare)
-        //{
-        //    History.Instance.AddToLogFile("In book method setting the boolean value to true.");
-        //    product.IsBooked = true;
-        //    History.Instance.AddToLogFile("Calling AddToFile method to add the booked product details to file.");
-        //    storage.Add( product,fare);
-        //    Console.WriteLine("Car Booked");
-        //}
-
-        //public void Save(IProduct product,IRepository storage,int fare )
-        //{
-            
-        //    History.Instance.AddToLogFile("Calling AddToFile method to add the booked product details to file.");
-        //    storage.Add(product,fare);
-
-        //    Console.WriteLine("Car Product saved");
-        //}
+       
     }
 }

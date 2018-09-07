@@ -6,18 +6,16 @@ using System.Threading.Tasks;
 
 namespace solidapproach
 {
-    class HotelProduct:IProduct
+    class AirProduct:IProduct
     {
-        FileRepository fileobj = new FileRepository();
-        public string prodtype = "Hotel";
-        public string prodname = "Hyatt";
+        public string prodtype = "Air";
+        public string prodname = "Jet Airways";
         public bool isbooked = false;
         public int Fare = 50;
         public string ProductType { get { return prodtype; } set { prodtype = value; } }
         public string ProductName { get { return prodname; } set { prodname = value; } }
         public bool IsBooked { get { return isbooked; } set { isbooked = value; } }
-        public int fare { get { return Fare; } set { Fare = value; } }
 
-        
+        public int fare { get { return Fare; } set { Fare = value; } }
     }
 }

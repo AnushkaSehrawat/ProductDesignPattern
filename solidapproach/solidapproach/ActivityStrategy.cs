@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace solidapproach
 {
-    class CarStrategy:IFareStrategy
+    class ActivityStrategy:IFareStrategy
     {
-
         public int CalculateFare(int totalFare)
         {
-            History.Instance.AddToLogFile("calculating and returning fare of Car Strategy Class");
-            return (totalFare + 20);
+            History.Instance.AddToLogFile("calculating and returning fare of Activity Strategy Class");
+            return (totalFare + 200);
         }
     }
 }

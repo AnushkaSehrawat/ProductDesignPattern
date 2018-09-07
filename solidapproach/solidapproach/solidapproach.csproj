@@ -42,6 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActivityProduct.cs" />
+    <Compile Include="ActivityStrategy.cs" />
+    <Compile Include="AirProduct.cs" />
+    <Compile Include="AirStrategy.cs" />
     <Compile Include="CarProduct.cs" />
     <Compile Include="CarStrategy.cs" />
     <Compile Include="FileRepository.cs" />
